@@ -10,18 +10,25 @@ import android.app.Activity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button BtnPendapatan;
+    Button BtnPendapatan, BtnLaporan;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         BtnPendapatan = findViewById(R.id.btnpendapatan);
-
+        BtnLaporan = findViewById(R.id.btnlaporan);
         BtnPendapatan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, pendapatan_input_form.class));
+            }
+        });
+
+        BtnLaporan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, laporan_view_form.class));
             }
         });
     }

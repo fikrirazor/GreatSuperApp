@@ -17,7 +17,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String sql = "create table pendapatan(no integer primary key, factor text null, tanggal text null, jumlah integer null, keterangan text null);";
         Log.d("Data","onCreate: " + sql);
         db.execSQL(sql);
-        sql = "INSERT INTO pendapatan(no,factor,tanggal,jumlah,ketarangan) VALUES ('1','tes','2019-11-19','12','oke tes');";
+        sql = "INSERT INTO pendapatan(no,factor,tanggal,jumlah,keterangan) VALUES ('1','tes','2019-11-19','12','oke tes');";
         db.execSQL(sql);
     }
     @Override

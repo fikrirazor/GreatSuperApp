@@ -32,7 +32,7 @@ public class pendapatan_input_form extends AppCompatActivity {
             public void onClick(View arg0) {
                 // TODO Auto-generated method stub
                 SQLiteDatabase db = dbHelper.getWritableDatabase();
-                db.execSQL("insert into pendapatan(no,factor,tanggal,jumlah,ketarangan) values('" +
+                db.execSQL("insert into pendapatan(no,factor,tanggal,jumlah,keterangan) values('" +
                         textfactor.getText().toString() + "','"+
                         texttgl.getText().toString() + "','"+
                         textjumlah.getText().toString() + "','"+
