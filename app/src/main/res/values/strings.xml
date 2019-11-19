@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">GreatSuperApp</string>
+    <string name="maps">Maps</string>
+    <string name="pendapatan">Pendapatan</string>
+    <string name="pengeluaran">Pengeluaran</string>
+    <string name="laporan">Laporan</string>
+    <string name="faktor">Faktor</string>
+    <string name="keterangan">Keterangan</string>
+    <string name="simpan">simpan</string>
+    <string name="title_activity_pendapatan_input_form">pendapatan_input_form</string>
+    <string name="title_activity_maps_view">Map</string>
+</resources>
