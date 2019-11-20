@@ -9,7 +9,7 @@ import android.os.Bundle;
 public class laporan_view_form extends AppCompatActivity {
     protected Cursor cursor;
     DatabaseHelper dbHelper;
-    TextView textpendapatan;
+    TextView textpendapatan,textpengeluaran;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,14 +18,26 @@ public class laporan_view_form extends AppCompatActivity {
 
         dbHelper = new DatabaseHelper(this);
         textpendapatan = (TextView) findViewById(R.id.textView2);
-
+        textpengeluaran = (TextView) findViewById(R.id.textView7);
         textpendapatan.setText(Integer.toString(jumlahpendapatan()));
+        textpengeluaran.setText(Integer.toString(jumlahpengeluaran()));
+
     }
 
     public int jumlahpendapatan(){
         int total = 0;
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         Cursor c = db.rawQuery("SELECT SUM(jumlah) FROM pendapatan", null);
+        if(c.moveToFirst()){
+            total = c.getInt(0);
+        }
+        return total;
+    }
+
+    public int jumlahpengeluaran(){
+        int total = 0;
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT SUM(jumlah) FROM pengeluaran", null);
         if(c.moveToFirst()){
             total = c.getInt(0);
         }
