@@ -11,8 +11,11 @@
         android:layout_width="157dp"
         android:layout_height="47dp"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="13dp"
         android:text="Pendapatan Form"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Pendapatan Form" />
@@ -21,19 +24,19 @@
         android:id="@+id/linearLayout"
         android:layout_width="251dp"
         android:layout_height="536dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="16dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/btnTambahPendapatan"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <EditText
-            android:id="@+id/InputKeterangan"
+            android:id="@+id/InputFaktor"
             android:layout_width="251dp"
             android:layout_height="85dp"
-            android:text="TextView" />
+            android:text="Faktor" />
 
         <EditText
             android:id="@+id/InputTanggal"
@@ -41,14 +44,8 @@
             android:layout_height="85dp"
             android:layout_marginTop="50dp"
             android:ems="10"
-            android:inputType="date" />
-
-        <EditText
-            android:id="@+id/InputFaktor"
-            android:layout_width="251dp"
-            android:layout_height="85dp"
-            android:layout_marginTop="50dp"
-            android:text="TextView" />
+            android:inputType="date"
+            android:text="yy-mm-dd" />
 
         <EditText
             android:id="@+id/InputJumlah"
@@ -56,7 +53,16 @@
             android:layout_height="85dp"
             android:layout_marginTop="50dp"
             android:ems="10"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal"
+            android:text="Jumlah" />
+
+        <EditText
+            android:id="@+id/InputKeterangan"
+            android:layout_width="251dp"
+            android:layout_height="85dp"
+            android:layout_marginTop="50dp"
+            android:text="Keterangan" />
+
     </LinearLayout>
 
     <Button
@@ -64,10 +70,11 @@
         android:layout_width="156dp"
         android:layout_height="69dp"
         android:layout_marginBottom="36dp"
-        android:text="Button"
+        android:text="Tambah"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
